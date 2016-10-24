@@ -33,14 +33,13 @@
                 $scope.valid = true;
                 $scope.lunch = lunch.split(",");
                 $scope.red = false;
+                $scope.green = true;
 
                 if($scope.lunch.length <= 3){
-                   $scope.msg = "Enjoy!";
-                   $scope.green = true;
+                   $scope.msg = "Enjoy!";  
 
                 } else if ($scope.lunch.length > 3){
                     $scope.msg = "Too much!";
-                    $scope.green = true;
                 }
             }
 
