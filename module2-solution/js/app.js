@@ -19,16 +19,16 @@
     
     .controller('ToBuyCtrl', ['$scope', 'ShoppingListCheckOffService', function($scope, ShoppingListCheckOffService){
         
-        $scope.toBuyList = ShoppingListCheckOffService.getToBuyList(); 
+        this.toBuyList = ShoppingListCheckOffService.getToBuyList(); 
 
-        $scope.remove = function(item){
+        this.remove = function(item){
             ShoppingListCheckOffService.switchList(item);
         };          
     }])
     
     .controller('BoughtCtrl', ['$scope', 'ShoppingListCheckOffService', function($scope, ShoppingListCheckOffService){
         
-        $scope.boughtList = ShoppingListCheckOffService.getBoughtList();
+        this.boughtList = ShoppingListCheckOffService.getBoughtList();
 
     }])
     

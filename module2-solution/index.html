@@ -14,17 +14,17 @@
 <body ng-app="ShoppingListCheckoff">
    <div class="container">
        <h1>Shopping List Checkoff</h1>
-        <div class="list" ng-controller="ToBuyCtrl">
+        <div class="list" ng-controller="ToBuyCtrl as ToBuy">
             <h2>To Buy</h2>
-            <p ng-if="!toBuyList.length">Everything is bought</p>
-            <ul ng-repeat="item in toBuyList">
-                <li>Buy {{item.quantity}} {{item.name}} <button class="rounded" ng-click="remove(item)">Bought</button></li>
+            <p ng-if="!ToBuy.toBuyList.length">Everything is bought</p>
+            <ul ng-repeat="item in ToBuy.toBuyList">
+                <li>Buy {{item.quantity}} {{item.name}} <button class="rounded" ng-click="ToBuy.remove(item)">Bought</button></li>
             </ul>
        </div>
-       <div class="list" ng-controller="BoughtCtrl">
+       <div class="list" ng-controller="BoughtCtrl as Bought">
             <h2>Bought</h2>
-           <p ng-if="!boughtList.length">Nothing bought yet</p>
-           <ul ng-repeat="item in boughtList">
+           <p ng-if="!Bought.boughtList.length">Nothing bought yet</p>
+           <ul ng-repeat="item in Bought.boughtList">
                 <li>Bought {{item.quantity}} {{item.name}}</li>
             </ul>
        </div>
